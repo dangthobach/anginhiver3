@@ -76,101 +76,99 @@
 
             </header>
             <aside id="fh5co-hero" class="js-fullheight">
-                <div class="flexslider js-fullheight">
-                    <ul class="slides">
-                        <li style="background-image: url(file:///E:/Ky%202%20nam%203/Hibernate/Client_Anginhi.vn/images/shutterstock_29452570.jpg)">
-                            <div class="overlay-gradient"></div>
-                            <div class="container">
-                                <div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
-                                    <div class="slider-text-inner desc">
-                                        <h2 class="heading-section">Tra cứu từ điển thực phẩm </h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </aside>
-            <!-- Goto http://w3c.github.io/html-reference/input.text.html#input.text for more information on all attributes that can be used with text input field -->
+			<div class="flexslider js-fullheight">
+				<ul class="slides">
+			   	<li style="background-image: url(images/shutterstock_29452570.jpg);">
+			   		<div class="overlay-gradient"></div>
+			   		<div class="container">
+			   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
+			   				<div class="slider-text-inner desc">
+			   					<h2 class="heading-section">Tra cứu thực phẩm</h2>
+			   					
+			   				</div>
+			   			</div>
+			   		</div>
+			   	</li>
+			  	</ul>
+		  	</div>
+		</aside>
+			<!--End of header-->		
+			<div id="fh5co-blog-section">
+			<div class="container">
+				<div class="row">
+					<div class="input-group input-group-lg col-lg-7 col-lg-offset-1">
+		<span class="input-group-addon">Nhập vào tên thực phẩm muốn tìm:</span>		      
+		<input type="text" class="form-control" placeholder="">	       
+	</div>		    
+	<div class="col-lg-2">
+		
+	</div>	      
+				</div>
+				<div class="row"  >
+	<div class="col-lg-3">
+  
+  <nav class="navigation"> <h4>Danh mục thực phẩm</h4>
+        <ul>
+          <li><a href="#"><span>Ngũ cốc và SPCB</span></a></li>
+          <li><a href="#"><span>Khoai củ và SPCB</span></a></li>
+          <li><a href="#"><span>Hạt,quả giàu đạm,béo và SPCB</span></a></li>
+          <li ><a href="#"><span>Rau,quả,củ dùng làm rau</span></a></li>
+			<li><a href="#"><span>Quả chín</span></a></li>
+          <li><a href="#"><span>Dầu,mỡ,bơ</span></a></li>
+          <li><a href="#"><span>Thịt và SPCB</span></a></li>
+          <li><a href="#"><span>Thủy sản và SPCB</span></a></li>
+			<li><a href="#"><span>Trứng và SPCB</span></a></li>
+          <li><a href="#"><span>Sữa và SPCB</span></a></li>
+          <li><a href="#"><span>Đồ hộp</span></a></li>
+          <li><a href="#"><span>Đường,bánh,mứt,kẹo</span></a></li>
+			<li><a href="#"><span>Gia vị, nước chấm</span></a></li>
+          <li>   
+          <a href="#"><span>Nước giải khát, bia rượu</span></a></li>
+        </ul></nav>
+</div>
+<div class="col-lg-9" name="result-table">
+			<div class="row" name="foodsearch-header">
+				<div class="col-lg-12">
+					<div class="col-lg-1" style="">Ảnh</div>
+					<div class="col-lg-3">Tên thực phẩm</div>
+					<div class="col-lg-8">						
+						<div class="col-lg-2 ">Năng lượng</div>
+						<div class="col-lg-2">Tinh bột</div>
+						<div class="col-lg-2">Tổng chất béo</div>
+						<div class="col-lg-2">Đạm</div>
+						<div class="col-lg-3">Tổng số đường</div>
+					</div>
+				</div>
+				
+				
+			</div>
+			<div class="row">
+		<div class="col-lg-12">
+				<a class="result_row" href="#">	
+					<div class="col-lg-1" name="foodImage" ><img style="width:100%; height:100%;" src="C:\Users\trann\Downloads\car-dealership-3250008_960_720.jpg"/></div>
+					<div class="col-lg-3 nutrient_cell" name="foodVName"></div>
+					<div class="col-lg-8 nutrient_cell">
+						
+						<div class="col-lg-2 " name="energy"></div>
+						<div class="col-lg-2" name="cacbohydrate">Tinh bot</div>
+						<div class="col-lg-2" name="totalTFacid"></div>
+						<div class="col-lg-2" name="protein"></div>
+						<div class="col-lg-3" name="totalSugar"></div>
+					</div>
+				</a>
+	</div>
+	</div>
+				
+	
+				
+				
+			</div>
+			</div>
+				
+		</div>
 
 
-
-        </div>
-        <!-- End of Header-->
-        <div >
-
-            <div class="input-group input-group-lg col-lg-7 col-lg-offset-1">
-                <span class="input-group-addon">Nhập vào tên thực phẩm muốn tìm:</span>		      
-                <input type="text" class="form-control" placeholder="">	       
-            </div>		    
-            <div class="col-lg-2">
-
-            </div>	      
-        </div>
-        <div >
-            <div class="col-lg-2">
-
-                <nav class="navigation"> <h4>Danh mục thực phẩm</h4>
-                    <ul>
-                          <c:forEach var="th" items="<%= new FoodCategoryModel().CategoryList()%>">
-                        <li><a href="#"><span>${th.foodCategoryName}</span></a></li>
-                        
-                          </c:forEach>
-                    </ul>
-                </nav>
-            </div>
-            <div class="col-lg-10">
-                <div class="row">
-                    <div class="col-lg-11">
-                        <div class="col-lg-1" style="">Image</div>
-                        <div class="col-lg-3">Name</div>
-                        <div class="col-lg-8">
-                            <div class="col-lg-1"></div>
-                            <div class="col-lg-2">Calo</div>
-                            <div class="col-lg-2">Tinh bot</div>
-                            <div class="col-lg-2">Chat beo</div>
-                            <div class="col-lg-2">Dam</div>
-                            <div class="col-lg-3"> 
-                                <select name="" style="width:50%">
-                                    <option value="0">Chat xo</option>
-                                    <option value="0">Muoi</option>
-                                    <option value="0">Cholesteron</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-1">Ua thich
-                    </div>
-
-                </div>
-
-                <div class="col-lg-11">
-                    <a class="result_row" href="#">	
-                        <div class="col-lg-1" ><img style="width:70px; height:70px;" src="C:\Users\trann\Downloads\car-dealership-3250008_960_720.jpg"/></div>
-                        <div class="col-lg-3 nutrient_cell">abcasdasdawioeu</div>
-                        <div class="col-lg-8 nutrient_cell">
-
-                            <div class="col-lg-2 col-lg-offset-1">Calo</div>
-                            <div class="col-lg-2">Tinh bot</div>
-                            <div class="col-lg-2">Chat beo</div>
-                            <div class="col-lg-2">Dam</div>
-                            <div class="col-lg-3"> 
-                                <select name="" style="width:50%">
-                                    <option value="0">Chat xo</option>
-                                    <option value="0">Muoi</option>
-                                    <option value="0">Cholesteron</option>
-                                </select>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-lg-1">Ua thich
-                </div>
-
-            </div>
-                
-        </div>
+		</div>
 
 
 
